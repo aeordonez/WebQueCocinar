@@ -4,6 +4,8 @@ from django.db import models
 class Receta(models.Model):
     titulo = models.CharField(max_length=150, verbose_name="Título")
     descripcion = models.TextField(verbose_name="Descripción")
+    ingredientes = models.TextField(verbose_name="Ingredientes")
+    tiempo = models.CharField(max_length=10, verbose_name="Tiempo")
     imagen = models.ImageField(upload_to="recetas")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificación")

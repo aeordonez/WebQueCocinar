@@ -16,15 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core import views
+from core import views as core_views
+from recetario import views as recetario_views
 from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('receta.html', views.receta, name='receta'),
-    path('', views.nosotros, name='nosotros'),
-    path('', views.contacto, name='contacto'),
+    path('', recetario_views.index, name='index'),
+    path('receta.html', core_views.receta, name='receta'),
+    path('', core_views.nosotros, name='nosotros'),
+    path('', core_views.contacto, name='contacto'),
 ]
 
 if settings.DEBUG:

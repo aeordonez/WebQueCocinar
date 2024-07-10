@@ -284,9 +284,9 @@ main .receta .detalle .ingredientes .tiempo .timer{
     margin-left: 10px;
     font-family: "Indie Flower", cursive;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: justify;
     word-wrap: break-word;
 }
@@ -302,9 +302,10 @@ main .receta .detalle .ingredientes h2{
     margin-right: 5px;
 }
 
-main .receta .detalle .ingredientes ul{
+#ingredientesReceta {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right:10px;
     font-family: "Indie Flower", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
