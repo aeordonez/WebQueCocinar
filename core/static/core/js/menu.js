@@ -25,7 +25,7 @@ function OcultarMenuMobile(){
 const currentUrl = window.location.href;
 
 
-function abrirReceta(pReceta){
+function abrirReceta(titulo, descripcion, imagen, ingredientes, tiempo){
     // alert(pTituloReceta.querySelector("h2").innerHTML)
 
     //extrae la url base
@@ -41,13 +41,22 @@ function abrirReceta(pReceta){
     window.location.assign(newUrl)
 
     //Almacena en clave tituloReceta en SessionStorage el título de la receta 
-    sessionStorage.setItem("tituloReceta", pReceta.querySelector("h2").innerHTML)
+    // sessionStorage.setItem("tituloReceta", pReceta.querySelector("h2").innerHTML)
+    sessionStorage.setItem("tituloReceta", titulo)
 
     //Almacena en clave fotoReceta en SessionStorage la ruta (src) de la receta 
-    sessionStorage.setItem("fotoReceta",pReceta.querySelector("img").src)
+    // sessionStorage.setItem("fotoReceta",pReceta.querySelector("img").src)
+    sessionStorage.setItem("fotoReceta",imagen)
 
     //Almacena en clave tiempoReceta en SessionStorage el tiempo de la receta 
-    sessionStorage.setItem("tiempoReceta",pReceta.querySelector("i").innerHTML)
+    // sessionStorage.setItem("tiempoReceta",pReceta.querySelector("i").innerHTML)
+    sessionStorage.setItem("tiempoReceta",tiempo)
+
+    //Almacena en clave tituloReceta en SessionStorage el título de la receta 
+    sessionStorage.setItem("descripcionReceta", descripcion)
+
+    //Almacena en clave tituloReceta en SessionStorage el título de la receta 
+    sessionStorage.setItem("ingredientesReceta", ingredientes)
 }
 
 if (currentUrl.substring(currentUrl.lastIndexOf("/")+1) == 'receta.html'){
@@ -70,4 +79,16 @@ if (currentUrl.substring(currentUrl.lastIndexOf("/")+1) == 'receta.html'){
 
      //Setea al elemento img el valor de la clave fotoReceta almacenado previamente en sessionStorage 
      i.innerHTML = sessionStorage.getItem("tiempoReceta")
+
+    //setea variable para apuntar al elemento de los ingredientes de la página receta.html
+    let ingredientes = document.getElementById("ingredientesReceta")
+
+     //Setea el valor de la clave ingredientesReceta almacenado previamente en sessionStorage 
+     ingredientes.innerHTML = sessionStorage.getItem("ingredientesReceta")
+
+    //setea variable para apuntar al elemento de los ingredientes de la página receta.html
+    let descripcionReceta = document.getElementById("descripcionReceta")
+
+     //Setea el valor de la clave ingredientesReceta almacenado previamente en sessionStorage 
+     descripcionReceta.innerHTML = sessionStorage.getItem("descripcionReceta")
 }
