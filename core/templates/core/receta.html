@@ -1,0 +1,37 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<section>
+    <div>
+        <h1>Prepará esta receta</h1>
+        <p id="leyenda_titulo">Prepará esta riquísima receta y comentanos cómo te fue con los pasos, cuál fue el resultado final y qué dijeron los comensales!</p>
+    </div>
+</section>
+
+<div class="contenedor_receta">
+    <section class="receta">
+
+        <div class="detalle">
+            <div class="wrapper_img_receta">
+                <img src="{% static 'core/img/receta1.jpg' %}" alt="imagen receta 1">
+            </div>
+            <div class="ingredientes">
+                <div class="tiempo">
+                    <h2>Tiempo</h2>
+                    <div class="timer"><i class="bi bi-alarm">25'</i></div>
+                </div>
+                <div class="lista">
+                    <h2>Ingredientes</h2>
+                    <p id="ingredientesReceta">Lista de ingredientes</p>
+                </div>
+                </div>
+            <div class="preparacion">
+                <h2>Preparación</h2>
+                <p id="descripcionReceta">Descripción de la receta</p>
+            </div>
+        </div>
+
+    </section>            
+</div>
+{% endblock %}

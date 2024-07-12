@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<section>
+    <div>
+        <h1>Contacto</h1>
+        <p id="leyenda_titulo">Podés contactarnos de distintas formas</p>
+    </div>
+</section>
+
+<div class='contenedor-contacto'>
+    <section >
+        <form action='' class='contenedor-formulario'>
+            
+            <p>Nombre: <input type='text' name='nombre' class='input-datos'></p>
+            <p>Apellido: <input type='text' name='apellido' class='input-datos'></p>
+            <p>Telefono: <input type='integer' name='telefono' class='input-datos'></p>
+            <p>Email: <input type='Email' name='email' class='input-datos'></p>
+            <p>Mensaje: <textarea name='mensaje' row='18' cols='45' class='input-datos'></textarea></p>
+
+        </section>
+        <br>
+
+            <button type='submit'>Enviar</button>
+
+        </form>
+   
+</div>
+<br>
+{% endblock %}

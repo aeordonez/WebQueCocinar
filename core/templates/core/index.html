@@ -1,0 +1,73 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<section>
+    <div>
+        <h1>¡Bienvenido a Que cocinar!</h1>
+        <p id="leyenda_titulo">¿No sabés qué cocinar hoy? Prepará uno de nuestros platos mejor valorados siguiendo los pasos de la receta o lo que te sugerimos según tus ingredientes!</p>
+    </div>
+</section>
+
+<div class="contenedor_recetas">
+    <section class="recetas">
+
+        <article class="receta" onclick="abrirReceta(this)">
+            <div class="wrapper_img_receta">
+                <img src="{% static 'core/img/receta1.jpg' %}" alt="imagen receta 1">
+            </div>
+            <h2>Budín de pan</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta modi beatae similique deleniti deserunt ullam nobis nesciunt odit voluptates odio? Veniam officiis et ad illum optio doloremque facere voluptates ea.</p>
+            <div class="timer"><i class="bi bi-alarm">25'</i></div>
+        </article>
+
+        <article class="receta" onclick="abrirReceta(this)">
+            <div class="wrapper_img_receta">
+                <img src="{% static 'core/img/receta2.jpg' %}" alt="imagen receta 2">
+            </div>
+            <h2>Chocotorta</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere esse labore error ipsam minus illo, dicta, itaque tempore, sed repellat quo exercitationem nulla explicabo perferendis blanditiis voluptatum ab! Libero!</p>
+            <div class="timer"><i class="bi bi-alarm">20'</i></div>
+        </article>
+
+        <article class="receta" onclick="abrirReceta(this)">
+            <div class="wrapper_img_receta">
+                <img src="{% static 'core/img/receta3.webp' %}" alt="imagen receta 3">
+            </div>
+            <div class="wrapper_desc_receta">
+                <h2>Lemon pie</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae temporibus ut magni quasi aspernatur itaque animi atque explicabo ab eveniet aut, unde ea adipisci aliquid inventore odit molestias asperiores quis.</p>
+                <div class="timer"><i class="bi bi-alarm">45'</i></div>
+            </div>
+        </article>
+
+        <article class="receta" onclick="abrirReceta(this)">
+            <div class="wrapper_img_receta">
+                <img src="{% static 'core/img/receta4.avif' %}" alt="imagen receta 4">
+            </div>
+            <h2>Brownie</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aliquam libero exercitationem voluptas cupiditate id amet aliquid, cum nisi necessitatibus commodi aspernatur in temporibus, quas atque molestias tempora sunt qui!</p>
+            <div class="timer"><i class="bi bi-alarm">35'</i></div>
+        </article>
+
+        <article class="receta" onclick="abrirReceta(this)">
+            <div class="wrapper_img_receta">
+                <img src="{% static 'core/img/receta5.jpg' %}" alt="imagen receta 5">
+            </div>
+            <h2>Chipacitos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid officia perspiciatis ab quam quidem corrupti natus deleniti nulla iste facilis, a magni vitae. Voluptate veritatis laudantium ipsa enim! Voluptates, molestias!</p>
+            <div class="timer"><i class="bi bi-alarm">25'</i></div>
+        </article>
+
+        <article class="receta" onclick="abrirReceta(this)">
+            <div class="wrapper_img_receta">
+                <img src="{% static 'core/img/receta6.webp' %}" alt="imagen receta 6">
+            </div>
+            <h2>Pepas de membrillo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quo aperiam repellendus unde, quae, quia et aut nostrum sapiente, obcaecati corporis at similique dolor dolorem quibusdam saepe sequi? Numquam, non.</p>
+            <div class="timer"><i class="bi bi-alarm">30'</i></div>
+        </article>
+
+    </section>            
+</div>
+{% endblock %}
