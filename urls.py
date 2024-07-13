@@ -22,10 +22,17 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD:WebQueCocinar/urls.py
+    path('', views.index, name='index'),
+    path('receta.html', views.receta, name='receta'),
+    path('nosotros.html', views.nosotros, name='nosotros'),
+    path('', views.contacto, name='contacto'),
+=======
     path('', recetario_views.index, name='index'),
     path('receta.html/', core_views.receta, name='receta'),
     path('nosotros/', core_views.nosotros, name='nosotros'),
     path('contacto/', core_views.contacto, name='contacto'),
+>>>>>>> origin/main:urls.py
 ]
 
 if settings.DEBUG:
