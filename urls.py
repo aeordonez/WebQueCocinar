@@ -23,9 +23,9 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', recetario_views.index, name='index'),
-    path('receta.html', core_views.receta, name='receta'),
-    path('', core_views.nosotros, name='nosotros'),
-    path('', core_views.contacto, name='contacto'),
+    path('receta.html/', core_views.receta, name='receta'),
+    path('nosotros/', core_views.nosotros, name='nosotros'),
+    path('contacto/', core_views.contacto, name='contacto'),
 ]
 
 if settings.DEBUG:
